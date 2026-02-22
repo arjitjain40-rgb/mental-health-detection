@@ -1,0 +1,14 @@
+# Ignore Mac system files
+.DS_Store
+
+# Ignore dataset folder
+face_module/dti project folder/
+
+# Ignore large model files
+*.h5
+*.pth
+*.csv
+
+# Allow only shared output csv
+!shared_outputs/emotion_output.csv
+
