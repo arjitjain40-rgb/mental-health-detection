@@ -104,3 +104,20 @@ while True:
 cap.release()
 file.close()
 cv2.destroyAllWindows()
+
+
+import os
+import subprocess
+
+# Get project root
+current_file = os.path.abspath(__file__)
+face_folder = os.path.dirname(current_file)
+project_root = os.path.dirname(face_folder)
+
+behavior_script = os.path.join(project_root, "behavior_module", "behavior_analysis.py")
+
+python_exe = os.path.join(project_root, ".venv", "Scripts", "python.exe")
+
+print("\nRunning automatic behavior analysis...\n")
+
+subprocess.run([python_exe, behavior_script])
